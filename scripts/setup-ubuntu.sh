@@ -102,7 +102,7 @@ step "Node.js"
 need_node=1
 if command -v node >/dev/null; then
   major="$(node -p "process.versions.node.split('.')[0]")"
-  [ "$major" -ge 20 ] && need_node=0
+  [ "$major" -ge 22 ] && need_node=0
 fi
 if [ "$need_node" -eq 1 ]; then
   curl -fsSL "https://deb.nodesource.com/setup_${NODE_MAJOR}.x" | $SUDO -E bash -
